@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morena Santillán — Diseñadora & Desarrolladora Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Cursor personalizado -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Nav -->
+    <nav class="nav">
+        <span class="nav-logo">MS<span class="dot">.</span></span>
+        <ul class="nav-links">
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-label reveal">
+                <span class="label-line"></span>
+                <span>Diseñadora & Desarrolladora Web</span>
+            </div>
+            <h1 class="hero-name reveal">
+                <span class="name-line">Morena</span>
+                <span class="name-line italic">Santillán</span>
+            </h1>
+            <p class="hero-sub reveal">Creo experiencias digitales modernas,<br>funcionales y visualmente memorables.</p>
+            <div class="hero-btns reveal">
+                <a href="#contacto" class="btn-primary">
+                    <span>Trabajemos juntos</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="./img/Cv.jpg" target="_blank" class="btn-ghost">Ver CV</a>
+            </div>
+        </div>
+
+        <div class="hero-gallery">
+            <div class="gallery-item gallery-item--1 reveal">
+                <img src="./img/foto1.jpeg" alt="Morena Santillán">
+                <div class="gallery-overlay"></div>
+            </div>
+            <div class="gallery-item gallery-item--2 reveal">
+                <img src="./img/foto4.jpeg" alt="Morena Santillán">
+                <div class="gallery-overlay"></div>
+            </div>
+            <div class="gallery-item gallery-item--3 reveal">
+                <img src="./img/foto3.jpeg" alt="Morena Santillán">
+                <div class="gallery-overlay"></div>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <div class="scroll-line"></div>
+            <span>scroll</span>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="stats-inner">
+            <div class="stat reveal">
+                <span class="stat-num">5<span class="plus">+</span></span>
+                <span class="stat-label">Proyectos<br>completados</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat reveal">
+                <span class="stat-num">2</span>
+                <span class="stat-label">Años de<br>experiencia</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat reveal">
+                <span class="stat-num">100<span class="plus">%</span></span>
+                <span class="stat-label">Compromiso<br>garantizado</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video -->
+    <section class="video-section">
+        <div class="section-header reveal">
+            <span class="section-tag">01 — Presentación</span>
+            <h2 class="section-title">Video<br><em>Presentación</em></h2>
+        </div>
+        <div class="video-wrap reveal">
+            <video controls poster="./img/miniatura-video.png">
+                <source src="./img/Video.mp4" type="video/mp4">
+            </video>
+            <div class="video-border"></div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="servicios" id="servicios">
+        <div class="section-header reveal">
+            <span class="section-tag">02 — Lo que hago</span>
+            <h2 class="section-title">Mis<br><em>Servicios</em></h2>
+        </div>
+        <div class="serv-grid">
+            <div class="servicio reveal">
+                <div class="serv-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <div class="serv-body">
+                    <h3>Diseño Web</h3>
+                    <p>Interfaces modernas y responsivas que conectan con tu audiencia y reflejan tu marca.</p>
+                </div>
+                <div class="serv-num">01</div>
+            </div>
+            <div class="servicio reveal">
+                <div class="serv-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="serv-body">
+                    <h3>Desarrollo Web</h3>
+                    <p>Sitios funcionales con código limpio, performante y mantenible a largo plazo.</p>
+                </div>
+                <div class="serv-num">02</div>
+            </div>
+            <div class="servicio reveal">
+                <div class="serv-icon">
+                    <i class="fas fa-wpforms"></i>
+                </div>
+                <div class="serv-body">
+                    <h3>Formularios</h3>
+                    <p>Flujos de contacto dinámicos e interactivos que mejoran la conversión.</p>
+                </div>
+                <div class="serv-num">03</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section class="proyectos" id="proyectos">
+        <div class="section-header reveal">
+            <span class="section-tag">03 — Trabajo</span>
+            <h2 class="section-title">Mis<br><em>Proyectos</em></h2>
+        </div>
+        <div class="carousel-wrap reveal">
+            <div class="carousel">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <img src="./img/proyecto1.PNG" alt="Proyecto 1">
+                        <div class="slide-info"><span>Proyecto 01</span></div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./img/proyecto2.jpg" alt="Proyecto 2">
+                        <div class="slide-info"><span>Proyecto 02</span></div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./img/proyecto3.jpg" alt="Proyecto 3">
+                        <div class="slide-info"><span>Proyecto 03</span></div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./img/proyecto4.jpg" alt="Proyecto 4">
+                        <div class="slide-info"><span>Proyecto 04</span></div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="./img/proyecto5.jpg" alt="Proyecto 5">
+                        <div class="slide-info"><span>Proyecto 05</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-btn" id="prevBtn"><i class="fas fa-arrow-left"></i></button>
+                <div class="carousel-dots" id="dots"></div>
+                <button class="carousel-btn" id="nextBtn"><i class="fas fa-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills" id="skills">
+        <div class="section-header reveal">
+            <span class="section-tag">04 — Tecnologías</span>
+            <h2 class="section-title">Mis<br><em>Skills</em></h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-item reveal" data-skill="HTML" data-level="90">
+                <div class="skill-header">
+                    <span class="skill-name">HTML</span>
+                    <span class="skill-pct">90%</span>
+                </div>
+                <div class="skill-bar-bg">
+                    <div class="skill-bar-fill" style="--w: 90%"></div>
+                </div>
+            </div>
+            <div class="skill-item reveal" data-skill="CSS" data-level="85">
+                <div class="skill-header">
+                    <span class="skill-name">CSS</span>
+                    <span class="skill-pct">85%</span>
+                </div>
+                <div class="skill-bar-bg">
+                    <div class="skill-bar-fill" style="--w: 85%"></div>
+                </div>
+            </div>
+            <div class="skill-item reveal" data-skill="JavaScript" data-level="75">
+                <div class="skill-header">
+                    <span class="skill-name">JavaScript</span>
+                    <span class="skill-pct">75%</span>
+                </div>
+                <div class="skill-bar-bg">
+                    <div class="skill-bar-fill" style="--w: 75%"></div>
+                </div>
+            </div>
+            <div class="skill-item reveal" data-skill="PHP" data-level="65">
+                <div class="skill-header">
+                    <span class="skill-name">PHP</span>
+                    <span class="skill-pct">65%</span>
+                </div>
+                <div class="skill-bar-bg">
+                    <div class="skill-bar-fill" style="--w: 65%"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="contacto" id="contacto">
+        <div class="contact-inner">
+            <div class="contact-text reveal">
+                <span class="section-tag">05 — Hablemos</span>
+                <h2 class="section-title">¿Trabajamos<br><em>juntos?</em></h2>
+                <p>Estoy disponible para proyectos freelance, colaboraciones y nuevas oportunidades.</p>
+            </div>
+            <div class="contact-links reveal">
+                <a href="https://wa.me/5491127147436?text=Holaa Morena, Quiero Una Reunion" target="_blank" class="contact-link">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                    <i class="fas fa-arrow-right link-arrow"></i>
+                </a>
+                <a href="https://www.instagram.com/17._moreeenaa" target="_blank" class="contact-link">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                    <i class="fas fa-arrow-right link-arrow"></i>
+                </a>
+                <a href="mailto:ariadnasantillan440@gmail.com?subject=Consulta%20Portfolio&body=Hola%20Morena,%20quiero%20contactarte..." class="contact-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                    <i class="fas fa-arrow-right link-arrow"></i>
+                </a>
+                <a href="https://discord.com/users/18._mooorenaaa" target="_blank" class="contact-link">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord</span>
+                    <i class="fas fa-arrow-right link-arrow"></i>
+                </a>
+                <a href="https://meet.google.com/wsw-ohkw-fpw" target="_blank" class="contact-link">
+                    <i class="fas fa-video"></i>
+                    <span>Google Meet</span>
+                    <i class="fas fa-arrow-right link-arrow"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/moreenaaa0401" target="_blank" class="contact-link">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span>LinkedIn</span>
+                    <i class="fas fa-arrow-right link-arrow"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-inner">
+            <span class="nav-logo">MS<span class="dot">.</span></span>
+            <p>© 2025 Morena Santillán — Todos los derechos reservados</p>
+            <span class="footer-tag">Diseño & Desarrollo</span>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
