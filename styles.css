@@ -495,6 +495,10 @@ body::after {
 .slide-info {
     position: absolute;
     bottom: 24px; left: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
 }
 .slide-info span {
     font-family: var(--font-mono);
@@ -506,6 +510,29 @@ body::after {
     padding: 8px 16px;
     border-radius: 4px;
     backdrop-filter: blur(10px);
+}
+.slide-link {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bg2, #0a0710);
+    background: rgba(245,240,255,0.9);
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(10px);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+.slide-link:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+.slide-link i {
+    font-size: 0.65rem;
 }
 .carousel-controls {
     display: flex;
