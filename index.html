@@ -1,300 +1,397 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morena Santillán — Diseñadora & Desarrolladora Web</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111019">
+  <meta name="description" content="Portfolio profesional de Morena Santillan, Técnica en Programación y UI/UX.">
+  <title>Morena Santillan | Portfolio profesional</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Exo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script>document.documentElement.classList.add("js")</script>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-    <!-- Cursor personalizado -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+  <!-- PANTALLA DE BIENVENIDA (permite iniciar la música) -->
+  <div class="intro" id="intro" role="dialog" aria-modal="true" aria-label="Bienvenida">
+    <div class="intro-inner">
+      <div class="intro-logo">MS<span>.</span></div>
+      <p class="intro-name">Morena Santillan</p>
+      <div class="intro-actions">
+        <button class="primary-button" data-music="on"><i class="fas fa-music"></i> Entrar con música</button>
+        <button class="secondary-button" data-music="off">Entrar en silencio</button>
+      </div>
+    </div>
+  </div>
 
-    <!-- Nav -->
-    <nav class="nav">
-        <span class="nav-logo">MS<span class="dot">.</span></span>
-        <ul class="nav-links">
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contacto" class="nav-cta">Contacto</a></li>
-        </ul>
+  <button class="music-toggle" id="musicToggle" aria-pressed="false">
+    <span class="eq"><i></i><i></i><i></i></span><span class="mt-label">Música apagada</span>
+  </button>
+
+  <div class="scroll-progress">
+    <div class="scroll-progress-fill"></div>
+  </div>
+
+  <!-- NAVEGACIÓN -->
+  <aside class="sidebar">
+    <a href="#inicio" class="logo">MS<span>.</span></a>
+
+    <nav class="nav-links">
+      <a href="#inicio" class="active"><i class="fas fa-house"></i> Inicio</a>
+      <a href="#sobre-mi"><i class="fas fa-user"></i> Sobre mí</a>
+      <a href="#habilidades"><i class="fas fa-code"></i> Habilidades</a>
+      <a href="#proyectos"><i class="fas fa-folder"></i> Proyectos</a>
+      <a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-label reveal">
-                <span class="label-line"></span>
-                <span>Diseñadora & Desarrolladora Web</span>
-            </div>
-            <h1 class="hero-name reveal">
-                <span class="name-line">Morena</span>
-                <span class="name-line italic">Santillán</span>
-            </h1>
-            <p class="hero-sub reveal">Creo experiencias digitales modernas,<br>funcionales y visualmente memorables.</p>
-            <div class="hero-btns reveal">
-                <a href="#contacto" class="btn-primary">
-                    <span>Trabajemos juntos</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="./img/Cv.jpg" target="_blank" class="btn-ghost">Ver CV</a>
-            </div>
-        </div>
+    <div class="sidebar-bottom">
+      <p>DESIGN · CODE · CREATE</p>
+      <div class="sidebar-socials">
+        <a href="https://www.instagram.com/17._moreeenaa" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/moreenaaa0401" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </aside>
 
-        <div class="hero-gallery">
-            <div class="gallery-item gallery-item--1 reveal">
-                <img src="./img/foto1.jpeg" alt="Morena Santillán">
-                <div class="gallery-overlay"></div>
-            </div>
-            <div class="gallery-item gallery-item--2 reveal">
-                <img src="./img/foto2.jpeg" alt="Morena Santillán">
-                <div class="gallery-overlay"></div>
-            </div>
-            <div class="gallery-item gallery-item--3 reveal">
-                <img src="./img/foto3.jpeg" alt="Morena Santillán">
-                <div class="gallery-overlay"></div>
-            </div>
-        </div>
+  <main>
 
-        <div class="hero-scroll">
-            <div class="scroll-line"></div>
-            <span>scroll</span>
+    <!-- INICIO -->
+    <header class="hero" id="inicio">
+      <div class="hero-top"><i class="aurora a1"></i><i class="aurora a2"></i></div>
+      <div class="hero-stage">
+        <div class="hero-visual hero-anim">
+          <div class="photo-placeholder">
+            <!-- FOTO DE PERFIL: guardá tu imagen en /img como Foto.png -->
+            <img src="./img/Foto.png" alt="Fotografía de Morena Santillan" class="profile-photo"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="photo-fallback" aria-hidden="true"><i class="fas fa-user"></i><span>Agregar fotografía</span></div>
+          </div>
+          <div class="computer-decoration">
+        <div class="computer-window">
+          <div class="window-header">
+            <span></span><span></span><span></span>
+            <small>portfolio.exe</small>
+          </div>
+          <div class="code-lines">
+            <p><span>01</span> const developer = "Morena";</p>
+            <p><span>02</span> let creativity = true;</p>
+            <p><span>03</span> function create() {</p>
+            <p class="indent"><span>04</span> return "Ideas digitales";</p>
+            <p><span>05</span> }</p>
+            <p class="code-highlight"><span>06</span> developer.create();</p>
+          </div>
         </div>
+        <div class="computer-base"></div>
+      </div>
+        </div>
+        <div class="hero-text">
+          <p class="eyebrow hero-anim" style="--i:1">Hola, soy</p>
+          <h1 class="hero-anim" style="--i:2">Morena<br>Santillan</h1>
+          <h2 class="hero-anim" style="--i:3"><span id="typed">Técnica en Programación</span><b class="caret"></b></h2>
+          <p class="hero-description hero-anim" style="--i:4">
+            Desarrollo sitios y sistemas web con lógica, creatividad y atención al detalle.
+            Transformo ideas en soluciones funcionales, claras y atractivas.
+          </p>
+          <div class="hero-buttons hero-anim" style="--i:5">
+            <a href="./documentos/CV-Morena-Santillan.pdf" class="primary-button" target="_blank" rel="noopener noreferrer">Ver mi CV <i class="fas fa-arrow-up-right-from-square"></i></a>
+            <a href="#proyectos" class="secondary-button">Ver proyectos</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- SOBRE MÍ -->
+    <section class="section about" id="sobre-mi">
+
+      <div class="section-heading">
+        <h2>Sobre <span>mí.</span></h2>
+        <p>Perfil, formación académica y orientación profesional.</p>
+      </div>
+
+      <div class="about-grid">
+
+        <article class="panel about-card">
+          <div class="panel-heading">
+            <i class="fas fa-terminal"></i>
+            <span>Perfil profesional</span>
+          </div>
+
+          <p>
+            Soy Técnica en Programación, con interés en el desarrollo de software,
+            el diseño de interfaces y la creación de productos digitales.
+            Me caracterizo por la responsabilidad, la iniciativa y el compromiso
+            con la mejora continua.
+          </p>
+
+          <p>
+            Disfruto analizar desafíos, proponer soluciones tecnológicas
+            y desarrollar experiencias digitales centradas en las personas.
+          </p>
+        </article>
+
+        <article class="panel education-card">
+          <div class="panel-heading">
+            <i class="fas fa-graduation-cap"></i>
+            <span>Educación</span>
+          </div>
+
+          <h3>E.E.S.T. Nº5</h3>
+          <p>Escuela de Educación Secundaria Técnica</p>
+          <span class="education-date">2020 — 2026</span>
+          <div class="education-line"></div>
+          <strong>Título: Técnica en Programación</strong>
+        </article>
+
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <strong>10+</strong>
+          <span>Proyectos realizados</span>
+        </div>
+        <div class="stat-card">
+          <strong>04</strong>
+          <span>Años de formación técnica</span>
+        </div>
+        <div class="stat-card">
+          <strong>100%</strong>
+          <span>Compromiso y creatividad</span>
+        </div>
+      </div>
+
     </section>
 
-    <!-- Stats -->
-    <section class="stats">
-        <div class="stats-inner">
-            <div class="stat reveal">
-                <span class="stat-num">5<span class="plus">+</span></span>
-                <span class="stat-label">Proyectos<br>completados</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat reveal">
-                <span class="stat-num">2</span>
-                <span class="stat-label">Años de<br>experiencia</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat reveal">
-                <span class="stat-num">100<span class="plus">%</span></span>
-                <span class="stat-label">Compromiso<br>garantizado</span>
-            </div>
+    <!-- HABILIDADES -->
+    <section class="section skills-section" id="habilidades">
+
+      <div class="section-heading">
+        <h2>Mis <span>habilidades.</span></h2>
+        <p>Tecnologías y áreas de trabajo que forman parte de mi formación.</p>
+      </div>
+
+      <div class="panel skills-panel">
+
+        <div class="skill-item">
+          <i class="fab fa-html5" aria-hidden="true"></i>
+          <div class="skill-info"><span>HTML</span><small>Estructura y contenido web</small></div>
         </div>
+
+        <div class="skill-item">
+          <i class="fab fa-css3-alt" aria-hidden="true"></i>
+          <div class="skill-info"><span>CSS</span><small>Diseño visual y responsive</small></div>
+        </div>
+
+        <div class="skill-item">
+          <i class="fab fa-js" aria-hidden="true"></i>
+          <div class="skill-info"><span>JavaScript</span><small>Interactividad y lógica</small></div>
+        </div>
+
+        <div class="skill-item">
+          <i class="fab fa-php" aria-hidden="true"></i>
+          <div class="skill-info"><span>PHP</span><small>Lógica del lado del servidor</small></div>
+        </div>
+
+        <div class="skill-item">
+          <i class="fab fa-python" aria-hidden="true"></i>
+          <div class="skill-info"><span>Python</span><small>Programación y automatización</small></div>
+        </div>
+
+        <div class="skill-item">
+          <i class="fas fa-pen-ruler" aria-hidden="true"></i>
+          <div class="skill-info"><span>UI/UX Design</span><small>Experiencias centradas en las personas</small></div>
+        </div>
+
+      </div>
+
     </section>
 
-    <!-- Video -->
-    <section class="video-section">
-        <div class="section-header reveal">
-            <span class="section-tag">01 — Presentación</span>
-            <h2 class="section-title">Video<br><em>Presentación</em></h2>
-        </div>
-        <div class="video-wrap reveal">
-            <video controls poster="./img/miniatura-video.png">
-                <source src="./img/Video.mp4" type="video/mp4">
-            </video>
-            <div class="video-border"></div>
-        </div>
+    <!-- PROYECTOS -->
+    <section class="section projects-section" id="proyectos">
+
+      <div class="section-heading">
+        <h2>Mis <span>proyectos.</span></h2>
+        <p>Selección de trabajos desarrollados durante mi formación técnica.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card">
+          <div class="project-image" data-fallback="Sistema de Agencia de Vuelos">
+            <img src="./img/miniatura1.png" alt="Sistema de Agencia de Vuelos" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+            <span class="project-index">PROYECTO / 01</span>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Desarrollo de software</span>
+            <h3>Sistema de Agencia de Vuelos</h3>
+            <p>Proyecto de gestión y administración de una agencia de vuelos.</p>
+            <a href="https://sistdeagenciadevuelos1.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link">
+              Ver proyecto <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image" data-fallback="Sistema de Seguridad">
+            <img src="./img/miniatura2.png" alt="Sistema de Seguridad" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+            <span class="project-index">PROYECTO / 02</span>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Programación y seguridad</span>
+            <h3>Sistema de Seguridad</h3>
+            <p>Desarrollo de un sistema orientado al control y seguridad.</p>
+            <a href="https://proyectosistemadeseguridad.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link">
+              Ver proyecto <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image" data-fallback="Sistema de Turnos Barbería">
+            <img src="./img/miniatura3.png" alt="Sistema de Turnos Barbería" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+            <span class="project-index">PROYECTO / 03</span>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Desarrollo web</span>
+            <h3>Sistema de Turnos Barbería</h3>
+            <p>Plataforma para administrar y organizar turnos de una barbería.</p>
+            <a href="https://proyectobarberiaa7mo2da.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+              Ver proyecto <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image" data-fallback="Sistema de Lista de Materias">
+            <img src="./img/miniatura4.png" alt="Sistema de Lista de Materias" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+            <span class="project-index">PROYECTO / 04</span>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Organización digital</span>
+            <h3>Sistema de Lista de Materias</h3>
+            <p>Herramienta digital para organizar tareas y materias.</p>
+            <a href="https://proyectolistadetareas.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+              Ver proyecto <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image" data-fallback="Sistema Registro Docente">
+            <img src="./img/miniatura5.png" alt="Sistema Registro Docente" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+            <span class="project-index">PROYECTO / 05</span>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Sistemas de gestión</span>
+            <h3>Sistema Registro Docente</h3>
+            <p>Sistema de registro y administración de información docente.</p>
+            <a href="https://amcontrolcentertec52026.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+              Ver proyecto <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image" data-fallback="Sistema de Cursos Online">
+            <img src="./img/miniatura6.png" alt="Sistema de Cursos Online" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+            <span class="project-index">PROYECTO / 06</span>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Plataforma web</span>
+            <h3>Sistema de Cursos Online</h3>
+            <p>Proyecto de plataforma digital para cursos y contenidos.</p>
+            <a href="https://amnails.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link">
+              Ver proyecto <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-image" data-fallback="Sistema de GPS para Familias">
+            <img src="./img/miniatura7.png" alt="Sistema de GPS para Familias" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+            <span class="project-index">PROYECTO / 07</span>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Tecnología y ubicación</span>
+            <h3>Sistema de GPS para Familias</h3>
+            <p>Proyecto orientado a la ubicación y seguimiento familiar.</p>
+            <a href="https://nexo360life.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+              Ver proyecto <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card domotica-card">
+          <div class="project-image" data-fallback="AM Domótica">
+            <img src="./img/miniatura8.png" alt="AM Domótica" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+            <span class="project-index">PROYECTO / 08</span>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Automatización e IoT</span>
+            <h3>AM Domótica</h3>
+            <p>Proyecto de automatización, control y tecnología para hogares inteligentes.</p>
+            <a href="https://amdomotica.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+              Ver proyecto <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
     </section>
 
-    <!-- Servicios -->
-    <section class="servicios" id="servicios">
-        <div class="section-header reveal">
-            <span class="section-tag">02 — Lo que hago</span>
-            <h2 class="section-title">Mis<br><em>Servicios</em></h2>
+    <!-- CONTACTO -->
+    <section class="section contact-section" id="contacto">
+
+      <div class="section-heading">
+        <h2>Conectemos <span>ideas.</span></h2>
+        <p>Disponible para intercambiar ideas, colaborar en proyectos y explorar nuevas oportunidades.</p>
+      </div>
+
+      <div class="contact-panel">
+        <div class="contact-intro">
+          <span class="contact-icon"><i class="fas fa-paper-plane"></i></span>
+          <h3>Construyamos una idea.</h3>
+          <p>Para consultas profesionales, propuestas o colaboraciones, podés contactarme por estos canales.</p>
         </div>
-        <div class="serv-grid">
-            <div class="servicio reveal">
-                <div class="serv-icon">
-                    <i class="fas fa-laptop-code"></i>
-                </div>
-                <div class="serv-body">
-                    <h3>Diseño Web</h3>
-                    <p>Interfaces modernas y responsivas que conectan con tu audiencia y reflejan tu marca.</p>
-                </div>
-                <div class="serv-num">01</div>
-            </div>
-            <div class="servicio reveal">
-                <div class="serv-icon">
-                    <i class="fas fa-code"></i>
-                </div>
-                <div class="serv-body">
-                    <h3>Desarrollo Web</h3>
-                    <p>Sitios funcionales con código limpio, performante y mantenible a largo plazo.</p>
-                </div>
-                <div class="serv-num">02</div>
-            </div>
-            <div class="servicio reveal">
-                <div class="serv-icon">
-                    <i class="fas fa-wpforms"></i>
-                </div>
-                <div class="serv-body">
-                    <h3>Formularios</h3>
-                    <p>Flujos de contacto dinámicos e interactivos que mejoran la conversión.</p>
-                </div>
-                <div class="serv-num">03</div>
-            </div>
+
+        <div class="contact-links">
+          <a href="https://wa.me/5491127147436?text=Hola%20Morena,%20quiero%20contactarte" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i><span>WhatsApp</span><i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="https://www.instagram.com/17._moreeenaa" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i><span>Instagram</span><i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="mailto:ariadnasantillan440@gmail.com">
+            <i class="fas fa-envelope"></i><span>Email</span><i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="https://discord.com/users/18._mooorenaaa" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-discord"></i><span>Discord</span><i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="https://meet.google.com/wsw-ohkw-fpw" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-video"></i><span>Google Meet</span><i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/moreenaaa0401" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i><span>LinkedIn</span><i class="fas fa-arrow-right"></i>
+          </a>
         </div>
+      </div>
+
     </section>
 
-    <!-- Proyectos -->
-    <section class="proyectos" id="proyectos">
-        <div class="section-header reveal">
-            <span class="section-tag">03 — Trabajo</span>
-            <h2 class="section-title">Mis<br><em>Proyectos</em></h2>
-        </div>
-        <div class="carousel-wrap reveal">
-            <div class="carousel">
-                <div class="carousel-track">
-                    <div class="carousel-slide">
-                        <img src="./img/proyecto1.PNG" alt="Proyecto 1">
-                        <div class="slide-info">
-                            <span>Proyecto 01: : Sist. de agencia de vuelos</span>
-                            <a href="https://sistdeagenciadevuelos.netlify.app/" target="_blank" class="slide-link">Ver repositorio <i class="fas fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="./img/proyecto2.jpg" alt="Proyecto 2">
-                        <div class="slide-info">
-                            <span>Proyecto 02: Sist. de seguridad de frigorifico</span>
-                            <a href="https://proyectosistemadeseguridad.netlify.app/" target="_blank" class="slide-link">Ver repositorio <i class="fas fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="./img/proyecto3.jpg" alt="Proyecto 3">
-                        <div class="slide-info">
-                            <span>Proyecto 03: Sist. registro docente </span>
-                            <a href="https://amcontrolcentertec52026.netlify.app/" target="_blank" class="slide-link">Ver repositorio <i class="fas fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="./img/proyecto4.jpg" alt="Proyecto 4">
-                        <div class="slide-info">
-                            <span>Proyecto 04: Sist. de lista de materias</span>
-                            <a href="https://proyectolistadetareas.netlify.app/" target="_blank" class="slide-link">Ver repositorio <i class="fas fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="./img/proyecto5.jpg" alt="Proyecto 5">
-                        <div class="slide-info">
-                            <span>Proyecto 05: Sist. de turnos de barberia</span>
-                            <a href="https://proyectobarberiaa7mo2da.netlify.app/" target="_blank" class="slide-link">Ver repositorio <i class="fas fa-arrow-up-right-from-square"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-controls">
-                <button class="carousel-btn" id="prevBtn"><i class="fas fa-arrow-left"></i></button>
-                <div class="carousel-dots" id="dots"></div>
-                <button class="carousel-btn" id="nextBtn"><i class="fas fa-arrow-right"></i></button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills -->
-    <section class="skills" id="skills">
-        <div class="section-header reveal">
-            <span class="section-tag">04 — Tecnologías</span>
-            <h2 class="section-title">Mis<br><em>Skills</em></h2>
-        </div>
-        <div class="skills-grid">
-            <div class="skill-item reveal" data-skill="HTML" data-level="90">
-                <div class="skill-header">
-                    <span class="skill-name">HTML</span>
-                    <span class="skill-pct">90%</span>
-                </div>
-                <div class="skill-bar-bg">
-                    <div class="skill-bar-fill" style="--w: 90%"></div>
-                </div>
-            </div>
-            <div class="skill-item reveal" data-skill="CSS" data-level="85">
-                <div class="skill-header">
-                    <span class="skill-name">CSS</span>
-                    <span class="skill-pct">85%</span>
-                </div>
-                <div class="skill-bar-bg">
-                    <div class="skill-bar-fill" style="--w: 85%"></div>
-                </div>
-            </div>
-            <div class="skill-item reveal" data-skill="JavaScript" data-level="75">
-                <div class="skill-header">
-                    <span class="skill-name">JavaScript</span>
-                    <span class="skill-pct">75%</span>
-                </div>
-                <div class="skill-bar-bg">
-                    <div class="skill-bar-fill" style="--w: 75%"></div>
-                </div>
-            </div>
-            <div class="skill-item reveal" data-skill="PHP" data-level="65">
-                <div class="skill-header">
-                    <span class="skill-name">PHP</span>
-                    <span class="skill-pct">65%</span>
-                </div>
-                <div class="skill-bar-bg">
-                    <div class="skill-bar-fill" style="--w: 65%"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacto -->
-    <section class="contacto" id="contacto">
-        <div class="contact-inner">
-            <div class="contact-text reveal">
-                <span class="section-tag">05 — Hablemos</span>
-                <h2 class="section-title">¿Trabajamos<br><em>juntos?</em></h2>
-                <p>Estoy disponible para proyectos freelance, colaboraciones y nuevas oportunidades.</p>
-            </div>
-            <div class="contact-links reveal">
-                <a href="https://wa.me/5491127147436?text=Holaa Morena, Quiero Una Reunion" target="_blank" class="contact-link">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>WhatsApp</span>
-                    <i class="fas fa-arrow-right link-arrow"></i>
-                </a>
-                <a href="https://www.instagram.com/17._moreeenaa" target="_blank" class="contact-link">
-                    <i class="fab fa-instagram"></i>
-                    <span>Instagram</span>
-                    <i class="fas fa-arrow-right link-arrow"></i>
-                </a>
-                <a href="mailto:ariadnasantillan440@gmail.com?subject=Consulta%20Portfolio&body=Hola%20Morena,%20quiero%20contactarte..." class="contact-link">
-                    <i class="fas fa-envelope"></i>
-                    <span>Email</span>
-                    <i class="fas fa-arrow-right link-arrow"></i>
-                </a>
-                <a href="https://discord.com/users/18._mooorenaaa" target="_blank" class="contact-link">
-                    <i class="fab fa-discord"></i>
-                    <span>Discord</span>
-                    <i class="fas fa-arrow-right link-arrow"></i>
-                </a>
-                <a href="https://meet.google.com/wsw-ohkw-fpw" target="_blank" class="contact-link">
-                    <i class="fas fa-video"></i>
-                    <span>Google Meet</span>
-                    <i class="fas fa-arrow-right link-arrow"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/moreenaaa0401" target="_blank" class="contact-link">
-                    <i class="fab fa-linkedin-in"></i>
-                    <span>LinkedIn</span>
-                    <i class="fas fa-arrow-right link-arrow"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-inner">
-            <span class="nav-logo">MS<span class="dot">.</span></span>
-            <p>© 2025 Morena Santillán — Todos los derechos reservados</p>
-            <span class="footer-tag">Diseño & Desarrollo</span>
-        </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <a href="#inicio" class="footer-logo">MS.</a>
+      <p>© 2026 Morena Santillan · Todos los derechos reservados.</p>
+      <span>DISEÑO & DESARROLLO WEB</span>
     </footer>
 
-    <script src="main.js"></script>
+  </main>
+
+  <script src="main.js"></script>
 </body>
 </html>
