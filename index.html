@@ -43,7 +43,9 @@
 
     <nav class="nav-links">
       <a href="#inicio" class="active"><i class="fas fa-house"></i> Inicio</a>
+      <a href="#presentacion"><i class="fas fa-circle-play"></i> Presentación</a>
       <a href="#sobre-mi"><i class="fas fa-user"></i> Sobre mí</a>
+      <a href="#publico"><i class="fas fa-bullseye"></i> Público objetivo</a>
       <a href="#habilidades"><i class="fas fa-code"></i> Habilidades</a>
       <a href="#proyectos"><i class="fas fa-folder"></i> Proyectos</a>
       <a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a>
@@ -77,7 +79,7 @@
             <span></span><span></span><span></span>
             <small>portfolio.exe</small>
           </div>
-          <div class="code-lines"
+          <div class="code-lines">
             <p><span>01</span> const developer = "Morena";</p>
             <p><span>02</span> let creativity = true;</p>
             <p><span>03</span> function create() {</p>
@@ -104,6 +106,32 @@
         </div>
       </div>
     </header>
+
+    <!-- VIDEO PRESENTACIÓN -->
+    <section class="section video-section" id="presentacion">
+
+      <div class="section-heading">
+        <h2>Video <span>presentación.</span></h2>
+        <p>Conocé quién soy y cómo trabajo en pocos minutos.</p>
+      </div>
+
+      <div class="panel video-panel">
+        <div class="video-frame" id="videoFrame">
+          <!-- VIDEO: guardalo en /img como presentacion.mp4 -->
+          <!-- MINIATURA: guardala en /img como miniatura-video.png -->
+          <video id="presentationVideo" preload="metadata" playsinline
+            poster="./img/miniaturavideo.png" aria-label="Video de presentación de Morena Santillan">
+            <source src="./img/videopresentacion.mp4" type="video/mp4">
+            Tu navegador no admite la reproducción de video.
+          </video>
+          <button class="video-play" id="videoPlay" type="button" aria-label="Reproducir video de presentación">
+            <i class="fas fa-play"></i>
+          </button>
+          <div class="video-fallback" aria-hidden="true"><i class="fas fa-film"></i><span>Agregar video de presentación</span></div>
+        </div>
+      </div>
+
+    </section>
 
     <!-- SOBRE MÍ -->
     <section class="section about" id="sobre-mi">
@@ -141,7 +169,7 @@
           </div>
 
           <h3>E.E.S.T. Nº5</h3>
-          <p>Escuela de Educación Secundaria Técnica</p>
+          <p>Escuela de Educación Secundaria Técnica N°5</p>
           <span class="education-date">2020 — 2026</span>
           <div class="education-line"></div>
           <strong>Título: Técnica en Programación</strong>
@@ -162,6 +190,44 @@
           <strong>100%</strong>
           <span>Compromiso y creatividad</span>
         </div>
+      </div>
+
+    </section>
+
+    <!-- PÚBLICO OBJETIVO -->
+    <section class="section audience-section" id="publico">
+
+      <div class="section-heading">
+        <h2>Público <span>objetivo.</span></h2>
+        <p>Las personas y organizaciones para quienes desarrollo mis soluciones.</p>
+      </div>
+
+      <div class="audience-grid">
+
+        <article class="panel audience-card">
+          <span class="audience-icon"><i class="fas fa-store"></i></span>
+          <h3>Emprendedores y comercios</h3>
+          <p>Negocios que necesitan presencia online, sistemas de turnos o herramientas simples para organizar su día a día.</p>
+        </article>
+
+        <article class="panel audience-card">
+          <span class="audience-icon"><i class="fas fa-school"></i></span>
+          <h3>Instituciones educativas</h3>
+          <p>Escuelas y centros de formación que buscan digitalizar registros, materias, cursos y la gestión de su información.</p>
+        </article>
+
+        <article class="panel audience-card">
+          <span class="audience-icon"><i class="fas fa-building"></i></span>
+          <h3>Empresas y equipos</h3>
+          <p>Organizaciones que requieren sistemas web a medida, con lógica clara, interfaces cuidadas y foco en el usuario.</p>
+        </article>
+
+        <article class="panel audience-card">
+          <span class="audience-icon"><i class="fas fa-user-tie"></i></span>
+          <h3>Reclutadores y colaboradores</h3>
+          <p>Equipos de tecnología y diseño que buscan sumar un perfil junior con compromiso, iniciativa y ganas de crecer.</p>
+        </article>
+
       </div>
 
     </section>
@@ -196,10 +262,6 @@
           <div class="skill-info"><span>PHP</span><small>Lógica del lado del servidor</small></div>
         </div>
 
-        <div class="skill-item">
-          <i class="fab fa-python" aria-hidden="true"></i>
-          <div class="skill-info"><span>Python</span><small>Programación y automatización</small></div>
-        </div>
 
         <div class="skill-item">
           <i class="fas fa-pen-ruler" aria-hidden="true"></i>
@@ -229,7 +291,7 @@
             <span class="project-category">Desarrollo de software</span>
             <h3>Sistema de Agencia de Vuelos</h3>
             <p>Proyecto de gestión y administración de una agencia de vuelos.</p>
-            <a href="https://sistdeagenciadevuelos1.netlify.app" target="_blank" rel="noopener noreferrer" class="project-link">
+            <a href="https://moreeenaa123.github.io/agenciadevuelos/" target="_blank" rel="noopener noreferrer" class="project-link">
               Ver proyecto <i class="fas fa-arrow-up-right-from-square"></i>
             </a>
           </div>

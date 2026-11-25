@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".nav-links a");
 
   const observedSections = document.querySelectorAll(
-    "#inicio, #sobre-mi, #habilidades, #proyectos, #contacto"
+    "#inicio, #presentacion, #sobre-mi, #publico, #habilidades, #proyectos, #contacto"
   );
 
   const sectionObserver = new IntersectionObserver((entries) => {
@@ -287,6 +287,46 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", () => enter(btn.dataset.music === "on"))
   );
   if (!intro) enter(false);
+
+
+  // =====================================
+  // VIDEO DE PRESENTACIÓN
+  // =====================================
+
+  const videoFrame = document.getElementById("videoFrame");
+  const video = document.getElementById("presentationVideo");
+  const videoPlay = document.getElementById("videoPlay");
+
+  if (video && videoFrame) {
+    let musicWasPlaying = false;
+
+    // Si el archivo todavía no está en /img, muestra un aviso en lugar del reproductor.
+    video.querySelector("source").addEventListener("error", () => {
+      videoFrame.classList.add("no-video");
+    });
+
+    videoPlay.addEventListener("click", () => {
+      video.controls = true;
+      video.play().catch(() => {});
+    });
+
+    video.addEventListener("play", () => {
+      videoFrame.classList.add("playing");
+      video.controls = true;
+      // Pausa la música de fondo mientras suena el video
+      if (music.playing) { musicWasPlaying = true; music.pause(); syncToggle(); }
+    });
+
+    const resumeMusic = () => {
+      if (musicWasPlaying) { musicWasPlaying = false; music.play(); syncToggle(); }
+    };
+    video.addEventListener("pause", resumeMusic);
+    video.addEventListener("ended", () => {
+      videoFrame.classList.remove("playing");
+      video.controls = false;
+      resumeMusic();
+    });
+  }
 
 
   // =====================================
